@@ -13,8 +13,8 @@ public class ProjectEuler {
 		System.out.println("Method 2: " + evenFib());
 		//System.out.println("Method 4: " + smallestMultiple());
 		//System.out.println("Method 5: " + highestPalindrome());
-		//System.out.println("Method 6: " + collatzSequence());
-//hello world
+		System.out.println("Method 6: " + collatzSequence());
+		System.out.println("Sum Square answer: " + sumSquareDifference());
 
 	}
 	
@@ -83,58 +83,70 @@ public class ProjectEuler {
 		return num;
 	}
 	
-	public static int highestPalindrome()
-	{
-		int fin = 0;
-		int numm = 998001;
-		int dig = 0;
-		int n = 0;
-		int rev = 0;
-		int num = 0;
-		boolean isPalindrome = false;
-		while (isPalindrome == false)
-		{
-			n = numm;
-			rev = 0;
-			while (num > 0)
-			{
-			     dig = num % 10;
-			     rev = rev * 10 + dig;
-			     num = num / 10;
-			}
-			if (num == numm)
-			{
-				isPalindrome = true;
-			}
-			else{
-				numm--;
-			}
-		}
-		return numm;
-//		for (int i = 100; i < 1000; i++)
+//	public static int highestPalindrome()
+//	{
+//		int fin = 0;
+//		int numm = 998001;
+//		int dig = 0;
+//		int n = 0;
+//		int rev = 0;
+//		int num = 0;
+//		boolean isPalindrome = false;
+//		while (isPalindrome == false)
 //		{
-//			if (numm % i == 0)
-//				fin = numm;
+//			n = numm;
+//			rev = 0;
+//			while (num > 0)
+//			{
+//			     dig = num % 10;
+//			     rev = rev * 10 + dig;
+//			     num = num / 10;
+//			}
+//			if (num == numm)
+//			{
+//				isPalindrome = true;
+//			}
+//			else{
+//				numm--;
+//			}
 //		}
-//		return fin;
-	}
+//		return numm;
+////		for (int i = 100; i < 1000; i++)
+////		{
+////			if (numm % i == 0)
+////				fin = numm;
+////		}
+////		return fin;
+//	}
+//	
+//	public static int highestPalindrome()
+//	{
+//		int maxNum = 998001;
+//		for (int i = maxNum; i > 10000; i--)
+//		{
+//			String str = i.toString();
+//			
+//		}
+//				
+//	}
 	
-	public static int highestPalindrome()
-	{
-		int maxNum = 998001;
-		for (int i = maxNum; i > 10000; i--)
-		{
-			String str = i.toString();
-			
+	public static int sumSquareDifference(){
+		int var = 0;
+		int varr = 0;
+		int answer = 0;
+		for (int i = 0; i <= 100; i++){
+			var = var + i*i;
+			varr += i;
 		}
-				
+		answer = ((varr*varr) - var);
+		return answer;
 	}
 	
 	public static int collatzSequence()
 	{
 		int max = 0;
 		int maxN = 0;
-		for (int i = 100000; i < 1000000; i++)
+		for (int i = 99000; i < 900000; i++)
 		{
 			int count = 0;
 			int temp= i;
